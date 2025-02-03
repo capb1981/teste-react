@@ -58,13 +58,13 @@ export const Tela = () => {
             </header>
 
             <main className="flex-grow flex items-start justify-center px-6 lg:px-0 lg:bg-yellow-500 md:bg-green-500 sm:bg-purple-500">
-                <div className="bg-white text-black rounded-lg shadow-md px-6 m-6 w-full text-center lg:w-1/2">
+                <div className="bg-white text-black rounded-lg shadow-md px-6 my-6 w-full text-center lg:w-1/2">
                     {!finalizado ? (
                         <>
                             <h2 className="font-bold text-black text-3xl text-left lg:font-extrabold lg:text-4xl">
                                 Pergunta {indice + 1} de {perguntasFiltradas.length}
                             </h2>
-                            <p className="rounded-md border-x-2 p-4 text-3xl text-justify font-bold lg:font-extrabold text-yellow-400 bg-blue-700">
+                            <p className="rounded-md border-x-2 p-4 text-2xl text-justify font-bold lg:font-extrabold lg:text-4xl text-yellow-400 bg-blue-700">
                                 {perguntaAtual.pergunta}
                             </p>
 
@@ -72,7 +72,7 @@ export const Tela = () => {
                                 {perguntaAtual.opcoes.map((opcao, index) => (
                                     <button
                                         key={opcao}
-                                        className={`my-2 p-0 text-justify tracking-tighter rounded-md font-bold text-2xl w-auto lg:font-extrabold hover:bg-slate-300 ${respostas[perguntaAtual.id] === opcao ? "bg-blue-500 text-white" : "bg-white"
+                                        className={`my-2 p-0 text-justify tracking-tighter rounded-md font-bold text-2xl w-auto lg:font-extrabold hover:bg-slate-300 lg:text-4xl ${respostas[perguntaAtual.id] === opcao ? "bg-blue-500 text-white" : "bg-white"
                                             }`}
                                         onClick={() => handleOptionClick(opcao)}
                                     >
