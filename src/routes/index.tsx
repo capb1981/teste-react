@@ -18,7 +18,6 @@ import { Teste01 } from "../testes/Teste01"
 import { Tela } from "../desafio09/Tela"
 import { Gabarito } from "../desafio09/Gabarito"
 
-
 export const AppRoutes = () => {
     return (
         <BrowserRouter>
