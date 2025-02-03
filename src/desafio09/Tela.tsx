@@ -15,8 +15,8 @@ const filtrarPorCategoria = (perguntas: Pergunta[], categoria: string) => {
 };
 
 // CONTROLE :: Definição manual da dificuldade e categoria (pode ser alterada conforme necessário)
-const nivelSelecionado = "média"; // "fácil" | "média" | "difícil"
-const categoriaSelecionada = "react+typescript"; // "react+typescript" | "html" | "Java" | "CSS" | "expressões numéricas"
+const nivelSelecionado = "difícil"; // "fácil" | "média" | "difícil"
+const categoriaSelecionada = "expressões numéricas"; // "react+typescript" | "html" | "Java" | "CSS" | "expressões numéricas"
 
 const perguntasFiltradas = embaralharPerguntas(
     filtrarPorCategoria(filtrarPorDificuldade(perguntas, nivelSelecionado), categoriaSelecionada)

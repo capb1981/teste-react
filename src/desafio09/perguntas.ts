@@ -565,6 +565,45 @@ export interface Pergunta {
         "7"
       ],
       correta: "6"
+    },
+    {
+      "id": 47,
+      "dificuldade": "difícil",
+      "categoria": "expressões numéricas",
+      "pergunta": "Qual é o valor de (8 + 2 × 5) ÷ 10?",
+      "opcoes": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correta": "1"
+    },
+    {
+      "id": 48,
+      "dificuldade": "difícil",
+      "categoria": "expressões numéricas",
+      "pergunta": "Qual é o valor de 4 × (3 + 2) ÷ 5?",
+      "opcoes": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correta": "4"
+    },
+    {
+      "id": 49,
+      "dificuldade": "difícil",
+      "categoria": "expressões numéricas",
+      "pergunta": "Qual é o valor de 3 × 2 + (6 ÷ 3) - 5?",
+      "opcoes": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correta": "3"
     }
   ];
   
