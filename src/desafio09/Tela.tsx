@@ -72,7 +72,7 @@ export const Tela = () => {
                                 {perguntaAtual.opcoes.map((opcao, index) => (
                                     <button
                                         key={opcao}
-                                        className={`my-2 p-0 text-justify rounded-md font-bold text-3xl w-auto lg:font-extrabold hover:bg-slate-300 ${respostas[perguntaAtual.id] === opcao ? "bg-blue-500 text-white" : "bg-white"
+                                        className={`my-2 p-0 text-justify tracking-tighter rounded-md font-bold text-2xl w-auto lg:font-extrabold hover:bg-slate-300 ${respostas[perguntaAtual.id] === opcao ? "bg-blue-500 text-white" : "bg-white"
                                             }`}
                                         onClick={() => handleOptionClick(opcao)}
                                     >
@@ -84,7 +84,7 @@ export const Tela = () => {
                             <div className="flex justify-between mt-4">
                                 {indice > 0 ? (
                                     <button
-                                        className="p-2 bg-gray-600 text-white rounded-md w-1/5 mb-6 mt-6 text-4xl font-bold hover:bg-red-600 lg:font-extrabold"
+                                        className="p-2 bg-gray-600 text-white rounded-md w-auto mb-6 mt-6 text-2xl font-bold hover:bg-red-600 lg:font-extrabold lg:text-4xl"
                                         onClick={voltarPergunta}
                                     >
                                         Voltar
@@ -94,7 +94,7 @@ export const Tela = () => {
                                 )}
 
                                 <button
-                                    className="p-2 bg-gray-600 text-white rounded-md w-1/5 mb-6 mt-6 text-4xl font-bold hover:bg-green-600 lg:font-extrabold"
+                                    className="p-2 bg-gray-600 text-white rounded-md w-auto mb-6 mt-6 text-2xl font-bold hover:bg-green-600 lg:font-extrabold lg:text-4xl"
                                     onClick={proximaPergunta}
                                     disabled={!respostas[perguntaAtual.id]}
                                 >
