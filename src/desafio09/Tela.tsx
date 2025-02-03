@@ -115,12 +115,9 @@ export const Tela = () => {
                                         Você acertou {calcularPontuacao()} de {perguntasFiltradas.length} perguntas!
                                     </h2>
                                 )}
-                                <a
-                                    href="/quiz"
-                                    className="p-2 bg-gray-600 text-white rounded-md w-1/5 mb-2 mt-2 text-2xl font-bold hover:bg-sky-600 lg:font-extrabold"
-                                >
+                                <Link to={"/quiz"} className="p-2 bg-gray-600 text-white rounded-md w-1/5 mb-2 mt-2 text-2xl font-bold hover:bg-sky-600 lg:font-extrabold">
                                     Novo Quiz
-                                </a>
+                                </Link>
                             </h2>
                         </div>
                     )}
