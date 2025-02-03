@@ -54,7 +54,7 @@ export const Tela = () => {
     return (
         <div className="flex flex-col min-h-screen bg-orange-500">
             <header className="bg-blue-600 text-white py-4 px-6">
-                <h1 className="text-lg font-bold text-center">Pergunta Aí</h1>
+                <h1 className="text-lg font-bold text-center">Responde Aí</h1>
             </header>
 
             <main className="flex-grow flex items-start justify-center px-6 lg:px-0 lg:bg-yellow-500 md:bg-green-500 sm:bg-purple-500">
