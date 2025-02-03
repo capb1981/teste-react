@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 10px 0px;
+}
+
+input {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    width: 100%;
+}
+
+.button1 {
+    color: black;
+    background-color: rgb(198, 198, 198);
+    padding: 5px 0px;
+    margin-left: 5px;
+    border-radius: 3px;
+    width: 100%;
+}
