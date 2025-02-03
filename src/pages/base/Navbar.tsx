@@ -20,7 +20,7 @@ export const Navbar = () => {
             <Link to={'/desafio06'} className={estilo}>Desafio06</Link>
             <Link to={'/desafio07'} className={estilo}>Desafio07</Link>
             <Link to={'/desafio08'} className={estilo}>Desafio08</Link>
-            <Link to={'/desafio09'} className={estilo}>Desafio09</Link>
+            <Link to={'/quiz'} className={estilo}>Quiz</Link>
         </nav>
 
     )
