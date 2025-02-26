@@ -17,6 +17,7 @@ import { Desafio08 } from "../desafio08/Desafio08"
 import { Teste01 } from "../testes/Teste01"
 import { Tela } from "../desafio09/Tela"
 import { Gabarito } from "../desafio09/Gabarito"
+import { Objetos } from "../desafio09/Objetos"
 
 export const AppRoutes = () => {
     return (
@@ -40,6 +41,8 @@ export const AppRoutes = () => {
 
                 <Route path="/quiz" element={<Tela />}></Route>
                 <Route path="/gabarito" element={<Gabarito />}></Route>
+
+                <Route path="/objetos" element={<Objetos />}></Route>
 
             </Routes>
         </BrowserRouter>

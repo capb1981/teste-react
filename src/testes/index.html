@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beto Torres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">torres.dev.br</h1>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:underline">Início</a></li>
+                <li><a href="#sobre" class="hover:underline">Sobre</a></li>
+                <li><a href="#projetos" class="hover:underline">Projetos</a></li>
+                <li><a href="#contato" class="hover:underline">Contato</a></li>
+            </ul>
+            <button class="md:hidden text-white">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-500 text-white py-16 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-20"
+            style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        </div>
+
+        <div class="container mx-auto px-1 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Transformando Ideias em Tecnologia</h2>
+            <p class="text-lg md:text-xl mb-8">Desenvolvedor Full Stack apaixonado por inovação e soluções tecnológicas.
+            </p>
+            <button
+                class="mt-16 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition duration-300">
+                Saiba Mais
+            </button>
+        </div>
+
+        <!-- Floating Tech Icons -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="flex space-x-4 animate-float mt-14">
+                <img src="https://cdn.worldvectorlogo.com/logos/java.svg" alt="Java" class="w-12 h-12">
+                <img src="https://res.infoq.com/articles/spring-boot-tutorial/en/headerimage/springboot-header-1585064952469.jpg"
+                    alt="Spring boot" class="w-12 h-12">
+                <img src="https://static-00.iconduck.com/assets.00/react-icon-512x512-u6e60ayf.png" alt="React"
+                    class="w-12 h-12">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968381.png" alt="Typescript" class="w-12 h-12">
+                <img src="https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png"
+                    alt="Tailwind" class="w-12 h-12">
+                <img src="data:image/png;base64,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"
+                    alt="PostgreeSQL" class="w-12 h-12">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="container mx-auto py-6 px-4 text-center">
+        <h3 class="text-3xl font-semibold text-gray-800">Sobre Mim</h3>
+        <p class="text-gray-600 mt-4">
+            Sou um desenvolvedor Web Full Stack com sólida formação acadêmica e técnica com experiência prática em
+            tecnologia.
+        </p>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div>
+                <h4 class="text-2xl font-bold text-blue-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    Formação Acadêmica
+                </h4>
+                <ul class="text-left mt-4 space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Técnico em Desenvolvimento em Sistemas e
+                                Segurança em Aplicações para Web</h5>
+                            <p class="text-gray-600">SENAC - PE (2009)</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Graduação em Ciências Contábeis</h5>
+                            <p class="text-gray-600">FACAL - PE (2022)</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Pós-Graduação em Tecnologia Java EAD</h5>
+                            <p class="text-gray-600">UNOPAR (2024)</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Graduação em Tecnologia em Análise e
+                                Desenvolvimento de Sistemas EAD</h5>
+                            <p class="text-gray-600">UNOPAR (2024)</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Experiência Profissional -->
+            <div>
+                <h4 class="text-2xl font-bold text-blue-600 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Experiência Profissional
+                </h4>
+                <ul class="text-left mt-4 space-y-4">
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Manifesto Game Studio</h5>
+                            <p class="text-gray-600">Estagiário (2008 - 2009): Auxiliar em desenvolvimento de softwares
+                                em Java e banco de dados MySQL.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">Escola Técnica Estadual de Pernambuco - José
+                                Humberto de Moura Cavalcanti</h5>
+                            <p class="text-gray-600">Professor de informática (2010 - 2016): Ministrar aulas com
+                                ênfase em desenvolvimento de softwares.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-semibold text-gray-800">IPLC – Instituto Padre Luis Cecchin</h5>
+                            <p class="text-gray-600">Instrutor de informática (2016 - 2019): Ministrar aulas com ênfase
+                                em informática básica para curso profissionalizante.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="container mx-auto py-3 px-4 text-center">
+        <h3 class="text-3xl font-semibold text-gray-800 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Habilidades
+        </h3>
+        <p class="text-gray-600 mt-4">
+            Desenvolvedor Full Stack com experiência em diversas tecnologias e ferramentas:
+        </p>
+        <div class="mt-4 grid md:grid-cols-2 gap-6">
+            <ul class="text-left mt-4 space-y-4">
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Desenvolvimento Back-End</h5>
+                        <p class="text-gray-600">Java, Spring Boot, APIs RESTful</p>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Banco de Dados</h5>
+                        <p class="text-gray-600">MySQL, PostgreSQL</p>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Ferramentas de Design</h5>
+                        <p class="text-gray-600">CorelDRAW, AutoCAD</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="text-left mt-4 space-y-4">
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Desenvolvimento Front-End</h5>
+                        <p class="text-gray-600">React, HTML, CSS</p>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Manutenção de Hardware</h5>
+                        <p class="text-gray-600">Configuração e reparo de computadores</p>
+                    </div>
+                </li>
+                <li class="flex items-start">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 2.444l-.5 2m11-4l3-1m0 0l-3-9a5.002 5.002 0 00-6.001-2.444l.5-2M6.75 7.5h10.5M3 12l3 1m0 0l-3 9a5.002 5.002 0 006.001 2.444l-.5 2m11-4l3-1m0 0l-3-9a5.002 5.002 0 00-6.001-2.444l.5-2M6.75 13.5h10.5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-800">Desenvolvimento de Interfaces</h5>
+                        <p class="text-gray-600">Interfaces responsivas e acessíveis</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="container mx-auto py-6 px-4 text-center">
+        <h3 class="text-3xl font-semibold text-gray-800">Meus Projetos</h3>
+        <div class="grid md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-xl font-bold text-blue-600">Sistema de Gestão</h4>
+                <p class="text-gray-600 mt-2">Desenvolvimento de um sistema completo para empresas.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-xl font-bold text-blue-600">App Web</h4>
+                <p class="text-gray-600 mt-2">Aplicação web para otimização de processos.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h4 class="text-xl font-bold text-blue-600">Plataforma Cloud</h4>
+                <p class="text-gray-600 mt-2">Infraestrutura escalável baseada na nuvem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-blue-500 text-white text-center py-12">
+        <h3 class="text-3xl font-semibold">Entre em Contato</h3>
+        <p class="mt-4 text-lg">Fale comigo para discutir seu próximo projeto.</p>
+        <div class="mt-6">
+            <a href="https://wa.me/5581997845278?text=Olá, vim pelo site torres.dev.br!"
+                class="mt-6 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-200">
+                Enviar Mensagem
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>&copy; 2024 torres.dev.br</p>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

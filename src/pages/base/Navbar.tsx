@@ -14,6 +14,7 @@ export const Navbar = () => {
             <Link to={'/estudando'} className={estilo}>Estudando</Link>
             <Link to={'/listaFor'} className={estilo}>ListaFOR</Link>
             <Link to={'/teste01'} className={estilo}>Teste01</Link>
+            <Link to={'/objetos'} className={estilo}>Objetos</Link>
             <Link to={'/desafio03'} className={estilo}>Desafio03</Link>
             <Link to={'/desafio04'} className={estilo}>Desafio04</Link>
             <Link to={'/desafio05'} className={estilo}>Desafio05</Link>
